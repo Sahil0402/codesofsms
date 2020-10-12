@@ -1,0 +1,113 @@
+/*
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+#include <iomanip.h>
+#define MAX 100
+class med_store
+{
+	private:
+		char med_name[30];
+		int qty;
+		float price,tot_amt;
+
+	public:
+		void ip(void);
+		void op(void);
+		float cal_tot_amt(void);
+		float sum_tot_amt(void)
+		{
+			return(tot_amt);
+		}
+
+};
+class name
+{
+	private:
+		char name[20];
+		int age;
+	public:
+		void ip1(void);
+		void op1(void);
+
+};
+void name :: ip1(void)
+{
+	cout << endl << "Enter the Name: ";
+	gets(name);
+	cout << endl << "Enter the Age: ";
+	cin >> age;
+}
+void name :: op1(void)
+{
+	cout << "--------------------------------------------------------------------------------";
+	cout << "Consumer's name   : " << name;
+	cout << endl << "Age    : " << age;
+	cout << endl << "--------------------------------------------------------------------------------" << endl;
+
+}
+void med_store :: ip(void)
+{
+	cout << endl << "Enter the Medicine name: ";
+	gets(med_name);
+	cout << endl << "Enter the Quantity: ";
+	cin >> qty;
+	cout << endl << "Enter the Price: ";
+	cin >> price;
+
+}
+void med_store :: op(void)
+{
+	cout.setf(ios::left,ios::adjustfield);
+	cout << setw(20) << endl << med_name;
+	cout.unsetf(ios::left);
+	cout << setw(15) << qty << setw(17) << price << setw(15) << cal_tot_amt() << endl;
+
+}
+float med_store :: cal_tot_amt(void)
+{
+	tot_amt = qty * price;
+	return(tot_amt);
+}
+void main()
+{
+	clrscr();
+	name na;
+	med_store med[MAX];
+	cout << endl << "Enter the following Info: ";
+	na.ip1();
+	int i,n;
+	cout << endl << "How many Medicine Purchased: ";
+	cin >> n;
+	clrscr();
+	for(i=0;i<n;i++)
+	{
+		med[i].ip();
+	}
+	clrscr();
+	na.op1();
+	cout << endl;
+	cout << endl;
+	cout << "--------------------------------------------------------------------------------";
+	cout << "Medicine name\t\t\tQty\t\tPrice\t\tTotal";
+	cout << endl << "--------------------------------------------------------------------------------";
+	for(i=0;i<n;i++)
+	{
+
+		 med[i].op();
+	}
+	cout << endl << "--------------------------------------------------------------------------------";
+	float tot_exp = 0;
+	for(i=0;i<n;i++)
+	{
+		tot_exp = tot_exp + med[i].sum_tot_amt();
+
+	}
+	cout << "Total Payable amount: " << tot_exp;
+	cout << endl << "--------------------------------------------------------------------------------";
+	getch();
+
+
+}
+*/
+
